@@ -88,7 +88,6 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Rji-iK-dS4"/>
                     <navigationItem key="navigationItem" title="Note Transcription" id="eXi-R2-zPF"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gmW-lP-BIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1984" y="881"/>
         </scene>
@@ -394,6 +393,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="3XA-cd-6bT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWq-GH-yCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Xkq-GU-ngH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Gq-Qh-jhM">
@@ -407,7 +407,6 @@
                         <segue destination="SBn-sx-Rks" kind="relationship" relationship="viewControllers" id="787-O0-wbd"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kWq-GH-yCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="357" y="149"/>
         </scene>
