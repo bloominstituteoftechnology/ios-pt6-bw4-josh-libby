@@ -15,6 +15,8 @@
 		68802CC92537D9120039CCE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68802CC72537D9120039CCE4 /* LaunchScreen.storyboard */; };
 		68802CD42537D9130039CCE4 /* NoteTranscriptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CD32537D9130039CCE4 /* NoteTranscriptionTests.swift */; };
 		68802CDF2537D9130039CCE4 /* NoteTranscriptionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CDE2537D9130039CCE4 /* NoteTranscriptionUITests.swift */; };
+		68802CF02537EB940039CCE4 /* AudioVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CEF2537EB930039CCE4 /* AudioVisualizer.swift */; };
+		68802CF52537EC870039CCE4 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CF42537EC870039CCE4 /* AudioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		68802CDA2537D9130039CCE4 /* NoteTranscriptionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoteTranscriptionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68802CDE2537D9130039CCE4 /* NoteTranscriptionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTranscriptionUITests.swift; sourceTree = "<group>"; };
 		68802CE02537D9130039CCE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68802CEF2537EB930039CCE4 /* AudioVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizer.swift; sourceTree = "<group>"; };
+		68802CF42537EC870039CCE4 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				68802CC52537D9120039CCE4 /* Assets.xcassets */,
 				68802CC72537D9120039CCE4 /* LaunchScreen.storyboard */,
 				68802CCA2537D9120039CCE4 /* Info.plist */,
+				68802CEF2537EB930039CCE4 /* AudioVisualizer.swift */,
+				68802CF42537EC870039CCE4 /* AudioViewController.swift */,
 			);
 			path = NoteTranscription;
 			sourceTree = "<group>";
@@ -258,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68802CF02537EB940039CCE4 /* AudioVisualizer.swift in Sources */,
 				68802CC12537D9110039CCE4 /* ViewController.swift in Sources */,
 				68802CBD2537D9110039CCE4 /* AppDelegate.swift in Sources */,
 				68802CBF2537D9110039CCE4 /* SceneDelegate.swift in Sources */,
+				68802CF52537EC870039CCE4 /* AudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
