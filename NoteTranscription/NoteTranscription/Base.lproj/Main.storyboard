@@ -11,14 +11,13 @@
         <!--Note Transcription-->
         <scene sceneID="W0S-Tn-Zgy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gmW-lP-BIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tableViewController id="yKr-RL-bLy" sceneMemberID="viewController">
+                <tableViewController id="yKr-RL-bLy" customClass="NotesTableViewController" customModule="NoteTranscription" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZYv-mz-J8p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="mCC-w5-v9f" detailTextLabel="k5u-7a-py2" style="IBUITableViewCellStyleValue1" id="8kv-gs-OaU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotesCell" textLabel="mCC-w5-v9f" detailTextLabel="k5u-7a-py2" style="IBUITableViewCellStyleValue1" id="8kv-gs-OaU">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8kv-gs-OaU" id="rcG-ET-e0d">
@@ -54,6 +53,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Rji-iK-dS4"/>
                     <navigationItem key="navigationItem" title="Note Transcription" id="eXi-R2-zPF"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmW-lP-BIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1984" y="881"/>
         </scene>
@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="1145" y="881"/>
         </scene>
-        <!--View Controller-->
+        <!--Notes Detail View Controller-->
         <scene sceneID="mF7-ju-XOX">
             <objects>
-                <viewController storyboardIdentifier="SpeechToTextEditor" id="smu-iW-XPE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpeechToTextEditor" id="smu-iW-XPE" customClass="NotesDetailViewController" customModule="NoteTranscription" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z8J-RF-jaC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +128,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cBa-7t-2tV">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="4LF-di-KAe"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="QFd-69-dJN"/>
+                            <barButtonItem systemItem="edit" id="4LF-di-KAe"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lu5-cS-zmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,7 +158,7 @@
         <!--Note Transcription-->
         <scene sceneID="9sj-I5-Joe">
             <objects>
-                <viewController storyboardIdentifier="SpeechToText" id="rxo-KA-nai" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpeechToText" id="rxo-KA-nai" customClass="NoteTranscriptionViewController" customModule="NoteTranscription" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uQv-7N-sqC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +227,7 @@
         <!--Note Transcription-->
         <scene sceneID="VPI-Er-pHd">
             <objects>
-                <viewController storyboardIdentifier="RecordedMemo" id="iyC-fU-5yw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordedMemo" id="iyC-fU-5yw" customClass="AudioMemoViewController" customModule="NoteTranscription" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bc9-ui-OV4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -340,7 +343,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="3XA-cd-6bT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kWq-GH-yCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Xkq-GU-ngH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Gq-Qh-jhM">
@@ -354,6 +356,7 @@
                         <segue destination="SBn-sx-Rks" kind="relationship" relationship="viewControllers" id="787-O0-wbd"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWq-GH-yCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="357" y="149"/>
         </scene>
@@ -365,6 +368,7 @@
         <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="stop.fill" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
