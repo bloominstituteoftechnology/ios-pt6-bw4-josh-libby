@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51862C7B253DE8CB00553C7B /* NoteTranscription.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51862C79253DE8CB00553C7B /* NoteTranscription.xcdatamodeld */; };
+		51862C83253DE96300553C7B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862C82253DE96300553C7B /* CoreDataStack.swift */; };
+		51862C88253DE9A100553C7B /* Note+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862C87253DE9A100553C7B /* Note+Convenience.swift */; };
+		51862C93253DEB8700553C7B /* BW4Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862C92253DEB8700553C7B /* BW4Notes.m */; };
+		51862C9B253DF11D00553C7B /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862C9A253DF11D00553C7B /* NotesTableViewController.swift */; };
+		51862CA0253DF15500553C7B /* AudioMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862C9F253DF15500553C7B /* AudioMemoViewController.swift */; };
+		51862CA5253DF17400553C7B /* NotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862CA4253DF17400553C7B /* NotesDetailViewController.swift */; };
+		51862CAA253DF19C00553C7B /* NoteTranscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862CA9253DF19C00553C7B /* NoteTranscriptionViewController.swift */; };
 		68802CBD2537D9110039CCE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CBC2537D9110039CCE4 /* AppDelegate.swift */; };
 		68802CBF2537D9110039CCE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CBE2537D9110039CCE4 /* SceneDelegate.swift */; };
-		68802CC12537D9110039CCE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CC02537D9110039CCE4 /* ViewController.swift */; };
 		68802CC42537D9110039CCE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68802CC22537D9110039CCE4 /* Main.storyboard */; };
 		68802CC62537D9120039CCE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68802CC52537D9120039CCE4 /* Assets.xcassets */; };
 		68802CC92537D9120039CCE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68802CC72537D9120039CCE4 /* LaunchScreen.storyboard */; };
@@ -35,10 +42,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51862C7A253DE8CB00553C7B /* NoteTranscription.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteTranscription.xcdatamodel; sourceTree = "<group>"; };
+		51862C82253DE96300553C7B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		51862C87253DE9A100553C7B /* Note+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Convenience.swift"; sourceTree = "<group>"; };
+		51862C90253DEB8600553C7B /* NoteTranscription-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoteTranscription-Bridging-Header.h"; sourceTree = "<group>"; };
+		51862C91253DEB8700553C7B /* BW4Notes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BW4Notes.h; sourceTree = "<group>"; };
+		51862C92253DEB8700553C7B /* BW4Notes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BW4Notes.m; sourceTree = "<group>"; };
+		51862C9A253DF11D00553C7B /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		51862C9F253DF15500553C7B /* AudioMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMemoViewController.swift; sourceTree = "<group>"; };
+		51862CA4253DF17400553C7B /* NotesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailViewController.swift; sourceTree = "<group>"; };
+		51862CA9253DF19C00553C7B /* NoteTranscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTranscriptionViewController.swift; sourceTree = "<group>"; };
 		68802CB92537D9110039CCE4 /* NoteTranscription.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteTranscription.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68802CBC2537D9110039CCE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68802CBE2537D9110039CCE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68802CC02537D9110039CCE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		68802CC32537D9110039CCE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68802CC52537D9120039CCE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68802CC82537D9120039CCE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,9 +92,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51862C78253DE89A00553C7B /* Core Model */ = {
+			isa = PBXGroup;
+			children = (
+				51862C79253DE8CB00553C7B /* NoteTranscription.xcdatamodeld */,
+				51862C82253DE96300553C7B /* CoreDataStack.swift */,
+				51862C87253DE9A100553C7B /* Note+Convenience.swift */,
+			);
+			path = "Core Model";
+			sourceTree = "<group>";
+		};
+		51862C8C253DEA4A00553C7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51862C91253DEB8700553C7B /* BW4Notes.h */,
+				51862C92253DEB8700553C7B /* BW4Notes.m */,
+				51862C90253DEB8600553C7B /* NoteTranscription-Bridging-Header.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51862C8D253DEA5300553C7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51862C8E253DEA6300553C7B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				51862C9A253DF11D00553C7B /* NotesTableViewController.swift */,
+				51862C9F253DF15500553C7B /* AudioMemoViewController.swift */,
+				51862CA4253DF17400553C7B /* NotesDetailViewController.swift */,
+				51862CA9253DF19C00553C7B /* NoteTranscriptionViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		51862C8F253DEA7E00553C7B /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 		68802CB02537D9100039CCE4 = {
 			isa = PBXGroup;
 			children = (
+				51862C8F253DEA7E00553C7B /* Model Controller */,
+				51862C8E253DEA6300553C7B /* View Controllers */,
+				51862C8D253DEA5300553C7B /* Views */,
+				51862C8C253DEA4A00553C7B /* Model */,
+				51862C78253DE89A00553C7B /* Core Model */,
 				68802CBB2537D9110039CCE4 /* NoteTranscription */,
 				68802CD22537D9130039CCE4 /* NoteTranscriptionTests */,
 				68802CDD2537D9130039CCE4 /* NoteTranscriptionUITests */,
@@ -101,7 +167,6 @@
 			children = (
 				68802CBC2537D9110039CCE4 /* AppDelegate.swift */,
 				68802CBE2537D9110039CCE4 /* SceneDelegate.swift */,
-				68802CC02537D9110039CCE4 /* ViewController.swift */,
 				68802CC22537D9110039CCE4 /* Main.storyboard */,
 				68802CC52537D9120039CCE4 /* Assets.xcassets */,
 				68802CC72537D9120039CCE4 /* LaunchScreen.storyboard */,
@@ -195,6 +260,7 @@
 				TargetAttributes = {
 					68802CB82537D9110039CCE4 = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 					68802CCE2537D9130039CCE4 = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -258,9 +324,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68802CC12537D9110039CCE4 /* ViewController.swift in Sources */,
+				51862C93253DEB8700553C7B /* BW4Notes.m in Sources */,
+				51862CA5253DF17400553C7B /* NotesDetailViewController.swift in Sources */,
+				51862C83253DE96300553C7B /* CoreDataStack.swift in Sources */,
+				51862C7B253DE8CB00553C7B /* NoteTranscription.xcdatamodeld in Sources */,
 				68802CBD2537D9110039CCE4 /* AppDelegate.swift in Sources */,
 				68802CBF2537D9110039CCE4 /* SceneDelegate.swift in Sources */,
+				51862C88253DE9A100553C7B /* Note+Convenience.swift in Sources */,
+				51862C9B253DF11D00553C7B /* NotesTableViewController.swift in Sources */,
+				51862CA0253DF15500553C7B /* AudioMemoViewController.swift in Sources */,
+				51862CAA253DF19C00553C7B /* NoteTranscriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4L85A4MKYA;
 				INFOPLIST_FILE = NoteTranscription/Info.plist;
@@ -445,6 +519,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.libbythomas.NoteTranscription;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Model/NoteTranscription-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,6 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4L85A4MKYA;
 				INFOPLIST_FILE = NoteTranscription/Info.plist;
@@ -464,6 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.libbythomas.NoteTranscription;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Model/NoteTranscription-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -593,6 +671,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		51862C79253DE8CB00553C7B /* NoteTranscription.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				51862C7A253DE8CB00553C7B /* NoteTranscription.xcdatamodel */,
+			);
+			currentVersion = 51862C7A253DE8CB00553C7B /* NoteTranscription.xcdatamodel */;
+			path = NoteTranscription.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 68802CB12537D9100039CCE4 /* Project object */;
 }
