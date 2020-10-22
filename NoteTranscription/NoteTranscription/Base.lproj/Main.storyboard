@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xkq-GU-ngH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -183,7 +183,6 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-lu-Iwg">
                                                 <rect key="frame" x="0.0" y="64" width="374" height="237"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -200,6 +199,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsW-p2-oQ1">
                                 <rect key="frame" x="157.5" y="280" width="99" height="30"/>
                                 <state key="normal" title="Choose Image"/>
+                                <connections>
+                                    <action selector="imageButtonTapped:" destination="rxo-KA-nai" eventType="touchUpInside" id="2XI-J0-orB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gxs-sk-xwA"/>
@@ -217,10 +219,24 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ycs-SA-h36"/>
                     <navigationItem key="navigationItem" title="Note Transcription" id="ZYL-p7-CzP">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8pR-GT-EV7"/>
+                        <barButtonItem key="leftBarButtonItem" id="rkL-t9-pcI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8pR-GT-EV7">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="rxo-KA-nai" id="M3V-df-ydB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="chooseImageButton" destination="IsW-p2-oQ1" id="FMl-ar-lN6"/>
+                        <outlet property="noteImage" destination="Mmi-zt-a1J" id="euF-mc-ST3"/>
+                        <outlet property="noteText" destination="HVE-lu-Iwg" id="D36-6H-IvU"/>
+                        <outlet property="noteTitle" destination="Kzk-Lk-18Y" id="kiZ-Vv-jSD"/>
+                        <outlet property="recordButton" destination="rkL-t9-pcI" id="xH5-c9-rhU"/>
+                        <segue destination="AGn-JH-K8S" kind="unwind" identifier="unwindSegueToHome" unwindAction="unwindSegueToHomeWithSegue:" id="1RB-Dc-8aS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fe-W1-0aI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="AGn-JH-K8S" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1877" y="-528"/>
         </scene>
