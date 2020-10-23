@@ -44,6 +44,41 @@
                                     <segue destination="smu-iW-XPE" kind="show" identifier="SpeechToTextEditSegue" id="oqc-HC-hKX"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AudioCell" id="d0w-Xw-wni" customClass="AudioMemoTableViewCell" customModule="NoteTranscription" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="71.5" width="414" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d0w-Xw-wni" id="jbt-TD-tLA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8St-fT-TcS">
+                                            <rect key="frame" x="345" y="0.0" width="69" height="43"/>
+                                            <state key="normal" title="Button" image="play.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="playButtonTapped:" destination="d0w-Xw-wni" eventType="touchUpInside" id="f7m-Ns-sC9"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fu-lk-o66">
+                                            <rect key="frame" x="20" y="11" width="41.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8St-fT-TcS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Fu-lk-o66" secondAttribute="trailing" constant="8" symbolic="YES" id="6cE-ok-PDr"/>
+                                        <constraint firstItem="3Fu-lk-o66" firstAttribute="top" secondItem="jbt-TD-tLA" secondAttribute="topMargin" id="ERx-II-la1"/>
+                                        <constraint firstAttribute="bottom" secondItem="8St-fT-TcS" secondAttribute="bottom" id="I8U-Tp-0wh"/>
+                                        <constraint firstItem="3Fu-lk-o66" firstAttribute="leading" secondItem="jbt-TD-tLA" secondAttribute="leadingMargin" id="MZ6-co-du7"/>
+                                        <constraint firstAttribute="trailing" secondItem="8St-fT-TcS" secondAttribute="trailing" id="Nom-Ir-BNF"/>
+                                        <constraint firstItem="8St-fT-TcS" firstAttribute="top" secondItem="jbt-TD-tLA" secondAttribute="top" id="YRM-92-ioc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3Fu-lk-o66" secondAttribute="bottom" id="hAx-Bt-KhF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="3Fu-lk-o66" id="cc9-SZ-pkd"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="yKr-RL-bLy" id="7ni-ie-2Kt"/>
