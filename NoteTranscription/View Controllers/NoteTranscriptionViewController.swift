@@ -61,6 +61,7 @@ class NoteTranscriptionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     @IBAction func imageButtonTapped(_ sender: UIButton) {

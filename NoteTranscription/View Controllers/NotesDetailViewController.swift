@@ -9,6 +9,10 @@ import UIKit
 
 class NotesDetailViewController: UIViewController {
 
+    // MARK: - Properties
+
+    var note: Notes?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

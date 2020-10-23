@@ -17,21 +17,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotesCell" textLabel="mCC-w5-v9f" detailTextLabel="k5u-7a-py2" style="IBUITableViewCellStyleValue1" id="8kv-gs-OaU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" textLabel="u6h-z4-G87" detailTextLabel="cbI-Sj-4hF" style="IBUITableViewCellStyleValue1" id="mwt-Pw-5xC">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8kv-gs-OaU" id="rcG-ET-e0d">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mwt-Pw-5xC" id="0Jj-4Y-twl">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mCC-w5-v9f">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u6h-z4-G87">
                                             <rect key="frame" x="20" y="12" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k5u-7a-py2">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cbI-Sj-4hF">
                                             <rect key="frame" x="350" y="12" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -40,7 +40,40 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AudioCell" id="8kv-gs-OaU" customClass="AudioMemoTableViewCell" customModule="NoteTranscription" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="71.5" width="414" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8kv-gs-OaU" id="rcG-ET-e0d">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdE-0g-PtR">
+                                            <rect key="frame" x="345" y="0.0" width="69" height="43"/>
+                                            <state key="normal" title="Button" image="play.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="playButtonTapped:" destination="8kv-gs-OaU" eventType="touchUpInside" id="PwY-VB-fCx"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfK-G8-NsW">
+                                            <rect key="frame" x="20" y="11" width="41.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yfK-G8-NsW" firstAttribute="leading" secondItem="rcG-ET-e0d" secondAttribute="leadingMargin" id="L0X-xi-SKp"/>
+                                        <constraint firstItem="XdE-0g-PtR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yfK-G8-NsW" secondAttribute="trailing" constant="8" symbolic="YES" id="TlY-ET-gRS"/>
+                                        <constraint firstItem="yfK-G8-NsW" firstAttribute="top" secondItem="rcG-ET-e0d" secondAttribute="topMargin" id="Vaf-xR-vI5"/>
+                                        <constraint firstAttribute="bottom" secondItem="XdE-0g-PtR" secondAttribute="bottom" id="Z97-Pn-pWN"/>
+                                        <constraint firstItem="XdE-0g-PtR" firstAttribute="top" secondItem="rcG-ET-e0d" secondAttribute="top" id="ZPa-Kb-PLZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="XdE-0g-PtR" secondAttribute="trailing" id="afX-Gg-oCc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yfK-G8-NsW" secondAttribute="bottom" id="utT-Pc-qEa"/>
+                                    </constraints>
+                                </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="titleLabel" destination="yfK-G8-NsW" id="BX8-TT-Lht"/>
                                     <segue destination="smu-iW-XPE" kind="show" identifier="SpeechToTextEditSegue" id="oqc-HC-hKX"/>
                                 </connections>
                             </tableViewCell>
@@ -127,12 +160,7 @@
                             <constraint firstItem="q85-kM-OeX" firstAttribute="leading" secondItem="0YV-tN-OTL" secondAttribute="leading" constant="20" id="gcU-Zr-ioA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cBa-7t-2tV">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="QFd-69-dJN"/>
-                            <barButtonItem systemItem="edit" id="4LF-di-KAe"/>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="cBa-7t-2tV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lu5-cS-zmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,7 +420,6 @@
         <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="stop.fill" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
