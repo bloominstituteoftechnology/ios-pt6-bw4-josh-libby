@@ -18,7 +18,7 @@ NS_SWIFT_NAME(Notes)
 @property (nonatomic) NSURL *audioURL;
 @property (nonatomic) NSData *img;
 
-- (instancetype)initWithTitle:(NSString *)title bodyText:(NSString *)bodyText timestamp:(NSDate *)timestamp audioURL:(NSURL *)audioURL;
+- (instancetype)initWithTitle:(NSString *)title audioURL:(NSURL *)audioURL;
 
 - (instancetype)initWithTitle:(NSString *)title bodyText:(NSString *)bodyText timestamp:(NSDate *)timestamp img:(NSData *)img;
 
