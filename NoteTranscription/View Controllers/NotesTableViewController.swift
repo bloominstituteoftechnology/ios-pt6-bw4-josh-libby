@@ -9,57 +9,51 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var note: Notes?
+    var notes: [Notes] = []
+    var notesDelegate: NotesDelegate?
 
-    }
+    // MARK: - Functions
 
     @IBAction func unwindSegueToHome(segue:UIStoryboardSegue) {
-        
+
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return 0
+        return notes.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath)
+        let note = notes[indexPath.row]
 
+        if note.audioURL != nil {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioCell", for: indexPath) as? AudioMemoTableViewCell else { return UITableViewCell() }
 
-        return cell
+            cell.recordingURL = note.audioURL
+            cell.titleLabel.text = note.title
+
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
+            let note = notes[indexPath.row]
+
+            cell.textLabel?.text = note.title
+            cell.detailTextLabel?.text = String(describing: note.timestamp)
+
+            return cell
+        }
+
     }
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SpeechToTextEditSegue" {
+            let detailVC = segue.destination as? NotesDetailViewController
 
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            detailVC?.note = notes[indexPath.row]
+        }
     }
 }

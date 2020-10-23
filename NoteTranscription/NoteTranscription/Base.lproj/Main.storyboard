@@ -44,6 +44,41 @@
                                     <segue destination="smu-iW-XPE" kind="show" identifier="SpeechToTextEditSegue" id="oqc-HC-hKX"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AudioCell" id="Bi7-Fb-c69" customClass="AudioMemoTableViewCell" customModule="NoteTranscription" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="71.5" width="414" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bi7-Fb-c69" id="ES9-te-aMb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLo-pW-MgN">
+                                            <rect key="frame" x="345" y="0.0" width="69" height="43"/>
+                                            <state key="normal" title="Button" image="play.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="playButtonTapped:" destination="Bi7-Fb-c69" eventType="touchUpInside" id="kCl-bh-I2G"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAj-o5-tbG">
+                                            <rect key="frame" x="20" y="11" width="41.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="NLo-pW-MgN" secondAttribute="bottom" id="7hU-Ja-lVQ"/>
+                                        <constraint firstItem="WAj-o5-tbG" firstAttribute="leading" secondItem="ES9-te-aMb" secondAttribute="leadingMargin" id="D5S-nT-Qv5"/>
+                                        <constraint firstItem="NLo-pW-MgN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WAj-o5-tbG" secondAttribute="trailing" constant="8" symbolic="YES" id="Hqb-gN-E53"/>
+                                        <constraint firstItem="NLo-pW-MgN" firstAttribute="top" secondItem="ES9-te-aMb" secondAttribute="top" id="Js2-nS-qf0"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WAj-o5-tbG" secondAttribute="bottom" id="QXe-fc-OxX"/>
+                                        <constraint firstItem="WAj-o5-tbG" firstAttribute="top" secondItem="ES9-te-aMb" secondAttribute="topMargin" id="jfI-ge-uQa"/>
+                                        <constraint firstAttribute="trailing" secondItem="NLo-pW-MgN" secondAttribute="trailing" id="n0H-A2-dNx"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="WAj-o5-tbG" id="8c1-mk-vvi"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="yKr-RL-bLy" id="7ni-ie-2Kt"/>
@@ -55,7 +90,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmW-lP-BIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1984" y="881"/>
+            <point key="canvasLocation" x="1982.608695652174" y="880.58035714285711"/>
         </scene>
         <!--Home-->
         <scene sceneID="Env-39-OgM">
