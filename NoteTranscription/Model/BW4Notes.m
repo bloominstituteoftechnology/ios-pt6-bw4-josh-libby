@@ -10,12 +10,10 @@
 @implementation BW4Notes
 
 
-- (instancetype)initWithTitle:(NSString *)title bodyText:(NSString *)bodyText timestamp:(NSDate *)timestamp audioURL:(NSURL *)audioURL
+- (instancetype)initWithTitle:(NSString *)title audioURL:(NSURL *)audioURL
 {
     if (self = [super init]) {
         _title = title;
-        _bodyText = bodyText;
-        _timestamp = timestamp;
         _audioURL = audioURL;
     }
     return self;
