@@ -124,13 +124,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		51862C8D253DEA5300553C7B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		51862C8E253DEA6300553C7B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +150,6 @@
 			children = (
 				51862C8F253DEA7E00553C7B /* Model Controller */,
 				51862C8E253DEA6300553C7B /* View Controllers */,
-				51862C8D253DEA5300553C7B /* Views */,
 				51862C8C253DEA4A00553C7B /* Model */,
 				51862C78253DE89A00553C7B /* Core Model */,
 				68802CBB2537D9110039CCE4 /* NoteTranscription */,

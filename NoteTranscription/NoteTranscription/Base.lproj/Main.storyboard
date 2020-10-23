@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xkq-GU-ngH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -334,6 +334,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="i71-Qq-mLP"/>
                     <navigationItem key="navigationItem" title="Note Transcription" id="k9I-XY-BWr"/>
+                    <connections>
+                        <outlet property="audioVisualizer" destination="UKM-bA-cYp" id="ddR-ar-Ao2"/>
+                        <outlet property="playButton" destination="e3x-xe-paR" id="NJ2-ca-iS8"/>
+                        <outlet property="recordButton" destination="dEg-Rk-HJR" id="9Ex-Ig-I4a"/>
+                        <outlet property="timeElapsedLabel" destination="Cmy-p0-x4u" id="lBF-un-XZY"/>
+                        <outlet property="timeRemainingLabel" destination="kiG-L2-qrD" id="bzf-lm-u8S"/>
+                        <outlet property="timeSlider" destination="vmE-JT-V2t" id="hpo-oZ-crf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOf-nD-CA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
