@@ -161,6 +161,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cBa-7t-2tV"/>
+                    <connections>
+                        <outlet property="bodyTextView" destination="JKd-xG-hg8" id="Ils-WW-x4h"/>
+                        <outlet property="imageView" destination="9Pq-C2-3zi" id="0jv-fu-BVo"/>
+                        <outlet property="titleTextField" destination="XOA-yE-gQB" id="aSt-uM-H2R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lu5-cS-zmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
