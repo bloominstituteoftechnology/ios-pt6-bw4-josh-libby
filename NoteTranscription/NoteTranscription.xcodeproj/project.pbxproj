@@ -19,6 +19,7 @@
 		51DE8CD7254219FC00009A69 /* NotesInternalStorage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8CD6254219FC00009A69 /* NotesInternalStorage+CoreDataClass.swift */; };
 		51DE8CDF25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8CDE25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift */; };
 		51DE8CE725421B0600009A69 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8CE625421B0600009A69 /* ImageHelper.swift */; };
+		685C44B525426634009CC989 /* AudioVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685C44B425426634009CC989 /* AudioVisualizer.swift */; };
 		68802CBD2537D9110039CCE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CBC2537D9110039CCE4 /* AppDelegate.swift */; };
 		68802CBF2537D9110039CCE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CBE2537D9110039CCE4 /* SceneDelegate.swift */; };
 		68802CC42537D9110039CCE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68802CC22537D9110039CCE4 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		51DE8CD6254219FC00009A69 /* NotesInternalStorage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesInternalStorage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		51DE8CDE25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesInternalStorage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		51DE8CE625421B0600009A69 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		685C44B425426634009CC989 /* AudioVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizer.swift; sourceTree = "<group>"; };
 		68802CB92537D9110039CCE4 /* NoteTranscription.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteTranscription.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68802CBC2537D9110039CCE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68802CBE2537D9110039CCE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				51DE8CBC2540FD6800009A69 /* UIImage+Scaling.swift */,
 				51DE8CE625421B0600009A69 /* ImageHelper.swift */,
+				685C44B425426634009CC989 /* AudioVisualizer.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				51862CA5253DF17400553C7B /* NotesDetailViewController.swift in Sources */,
 				51862C83253DE96300553C7B /* CoreDataStack.swift in Sources */,
 				51862C7B253DE8CB00553C7B /* NoteTranscription.xcdatamodeld in Sources */,
+				685C44B525426634009CC989 /* AudioVisualizer.swift in Sources */,
 				68802CBD2537D9110039CCE4 /* AppDelegate.swift in Sources */,
 				68802CBF2537D9110039CCE4 /* SceneDelegate.swift in Sources */,
 				51862C88253DE9A100553C7B /* Note+Convenience.swift in Sources */,
