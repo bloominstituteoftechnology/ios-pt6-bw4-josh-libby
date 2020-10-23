@@ -209,6 +209,7 @@ class AudioMemoViewController: UIViewController {
                 }
 
                 print("Recording permission has been granted!")
+
             }
         case .denied:
             print("Microphone access has been blocked.")
