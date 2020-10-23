@@ -44,6 +44,41 @@
                                     <segue destination="smu-iW-XPE" kind="show" identifier="SpeechToTextEditSegue" id="oqc-HC-hKX"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AudioCell" id="4rn-Xb-bWx" customClass="AudioMemoTableViewCell" customModule="NoteTranscription" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="71.5" width="414" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4rn-Xb-bWx" id="WnI-5T-Ugz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNr-g7-0rt">
+                                            <rect key="frame" x="345" y="0.0" width="69" height="43"/>
+                                            <state key="normal" title="Button" image="play.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="playButtonTapped:" destination="4rn-Xb-bWx" eventType="touchUpInside" id="xUH-ZN-awv"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqG-Iz-Vdp">
+                                            <rect key="frame" x="20" y="11" width="41.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XNr-g7-0rt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RqG-Iz-Vdp" secondAttribute="trailing" constant="8" symbolic="YES" id="5hh-Di-8Yr"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="RqG-Iz-Vdp" secondAttribute="bottom" id="5mC-Us-Vuo"/>
+                                        <constraint firstAttribute="bottom" secondItem="XNr-g7-0rt" secondAttribute="bottom" id="7bV-63-X5Q"/>
+                                        <constraint firstItem="RqG-Iz-Vdp" firstAttribute="top" secondItem="WnI-5T-Ugz" secondAttribute="topMargin" id="TYV-qa-1cT"/>
+                                        <constraint firstItem="XNr-g7-0rt" firstAttribute="top" secondItem="WnI-5T-Ugz" secondAttribute="top" id="VSW-Ke-SxI"/>
+                                        <constraint firstItem="RqG-Iz-Vdp" firstAttribute="leading" secondItem="WnI-5T-Ugz" secondAttribute="leadingMargin" id="hc6-8B-geQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="XNr-g7-0rt" secondAttribute="trailing" id="v6Q-Sr-du6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="RqG-Iz-Vdp" id="SC3-rn-IPS"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="yKr-RL-bLy" id="7ni-ie-2Kt"/>
