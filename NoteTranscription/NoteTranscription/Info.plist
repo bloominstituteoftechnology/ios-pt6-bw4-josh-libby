@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) needs access to your library to save images for your notes</string>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string>$(PRODUCT_NAME) needs access to your microphone to record audio notes.</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

@@ -209,7 +209,6 @@ class AudioMemoViewController: UIViewController {
                 }
 
                 print("Recording permission has been granted!")
-                // NOTE: Invite the user to tap record again, since we just interrupted them, and they may not have been ready to record
             }
         case .denied:
             print("Microphone access has been blocked.")

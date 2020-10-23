@@ -310,6 +310,9 @@
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vmE-JT-V2t">
                                                 <rect key="frame" x="61" y="0.0" width="252" height="31"/>
+                                                <connections>
+                                                    <action selector="updateCurrentTime:" destination="iyC-fU-5yw" eventType="valueChanged" id="Gtq-Wz-FTB"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiG-L2-qrD">
                                                 <rect key="frame" x="319" y="0.0" width="55" height="30"/>
@@ -330,11 +333,17 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" image="play.fill" catalog="system"/>
                                                 <state key="selected" image="pause.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="togglePlayback:" destination="iyC-fU-5yw" eventType="touchUpInside" id="tib-yL-nCI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEg-Rk-HJR">
                                                 <rect key="frame" x="187" y="0.0" width="187" height="46"/>
                                                 <state key="normal" image="mic.fill" catalog="system"/>
                                                 <state key="selected" image="stop.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="toggleRecording:" destination="iyC-fU-5yw" eventType="touchUpInside" id="oLL-b2-PwH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -346,6 +355,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yt2-dj-7hY">
                                 <rect key="frame" x="20" y="596" width="374" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveRecording:" destination="iyC-fU-5yw" eventType="touchUpInside" id="xbn-df-8bo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GW3-pZ-fuC"/>
