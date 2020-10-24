@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xkq-GU-ngH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -312,6 +312,9 @@
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vmE-JT-V2t">
                                                 <rect key="frame" x="61" y="0.0" width="252" height="31"/>
+                                                <connections>
+                                                    <action selector="updateCurrentTime:" destination="iyC-fU-5yw" eventType="valueChanged" id="LHm-UJ-WS8"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiG-L2-qrD">
                                                 <rect key="frame" x="319" y="0.0" width="55" height="30"/>
@@ -332,11 +335,17 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" image="play.fill" catalog="system"/>
                                                 <state key="selected" image="pause.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="togglePlayback:" destination="iyC-fU-5yw" eventType="touchUpInside" id="weR-iY-rQQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEg-Rk-HJR">
                                                 <rect key="frame" x="187" y="0.0" width="187" height="46"/>
                                                 <state key="normal" image="mic.fill" catalog="system"/>
                                                 <state key="selected" image="stop.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="toggleRecording:" destination="iyC-fU-5yw" eventType="touchUpInside" id="ywG-Wf-m92"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -348,6 +357,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yt2-dj-7hY">
                                 <rect key="frame" x="20" y="596" width="374" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveRecording:" destination="iyC-fU-5yw" eventType="touchUpInside" id="4fz-Su-Kcb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GW3-pZ-fuC"/>
@@ -369,6 +381,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="i71-Qq-mLP"/>
                     <navigationItem key="navigationItem" title="Note Transcription" id="k9I-XY-BWr"/>
+                    <connections>
+                        <outlet property="audioVisualizer" destination="UKM-bA-cYp" id="psg-KA-Shd"/>
+                        <outlet property="playButton" destination="e3x-xe-paR" id="aay-EH-XKh"/>
+                        <outlet property="recordButton" destination="dEg-Rk-HJR" id="anU-jq-W4K"/>
+                        <outlet property="timeElapsedLabel" destination="Cmy-p0-x4u" id="f7z-53-wy9"/>
+                        <outlet property="timeRemainingLabel" destination="kiG-L2-qrD" id="2tn-jW-Fum"/>
+                        <outlet property="timeSlider" destination="vmE-JT-V2t" id="8E8-rN-F92"/>
+                        <outlet property="titleTextField" destination="VGv-9T-dVb" id="Age-Fl-J9O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOf-nD-CA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

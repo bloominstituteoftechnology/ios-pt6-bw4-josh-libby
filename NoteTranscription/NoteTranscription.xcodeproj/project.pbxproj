@@ -20,6 +20,7 @@
 		51DE8CDF25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8CDE25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift */; };
 		51DE8CE725421B0600009A69 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8CE625421B0600009A69 /* ImageHelper.swift */; };
 		51DE8D3425437E2900009A69 /* AudioMemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8D3325437E2900009A69 /* AudioMemoTableViewCell.swift */; };
+		68091E542543A6BA00282120 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68091E532543A6BA00282120 /* NoteController.swift */; };
 		685C44B525426634009CC989 /* AudioVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685C44B425426634009CC989 /* AudioVisualizer.swift */; };
 		68802CBD2537D9110039CCE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CBC2537D9110039CCE4 /* AppDelegate.swift */; };
 		68802CBF2537D9110039CCE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CBE2537D9110039CCE4 /* SceneDelegate.swift */; };
@@ -63,6 +64,7 @@
 		51DE8CDE25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesInternalStorage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		51DE8CE625421B0600009A69 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		51DE8D3325437E2900009A69 /* AudioMemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMemoTableViewCell.swift; sourceTree = "<group>"; };
+		68091E532543A6BA00282120 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		685C44B425426634009CC989 /* AudioVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizer.swift; sourceTree = "<group>"; };
 		68802CB92537D9110039CCE4 /* NoteTranscription.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteTranscription.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68802CBC2537D9110039CCE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				51DE8CBC2540FD6800009A69 /* UIImage+Scaling.swift */,
 				51DE8CE625421B0600009A69 /* ImageHelper.swift */,
 				685C44B425426634009CC989 /* AudioVisualizer.swift */,
+				68091E532543A6BA00282120 /* NoteController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51862C93253DEB8700553C7B /* BW4Notes.m in Sources */,
+				68091E542543A6BA00282120 /* NoteController.swift in Sources */,
 				51862CA5253DF17400553C7B /* NotesDetailViewController.swift in Sources */,
 				51862C83253DE96300553C7B /* CoreDataStack.swift in Sources */,
 				51862C7B253DE8CB00553C7B /* NoteTranscription.xcdatamodeld in Sources */,
