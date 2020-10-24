@@ -22,11 +22,6 @@ class NotesTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        tableView.reloadData()
-    }
-
     // MARK: - Functions
 
 

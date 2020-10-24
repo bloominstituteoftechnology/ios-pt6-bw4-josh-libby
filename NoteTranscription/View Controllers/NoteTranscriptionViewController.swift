@@ -12,10 +12,6 @@ import CoreImage
 import CoreImage.CIFilterBuiltins
 import Photos
 
-protocol NotesDelegate {
-    func getNotes(note: Notes)
-}
-
 class NoteTranscriptionViewController: UIViewController {
     @IBOutlet weak var noteTitle: UITextField!
     @IBOutlet weak var noteText: UITextView!

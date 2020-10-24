@@ -389,9 +389,11 @@
                         <outlet property="timeRemainingLabel" destination="kiG-L2-qrD" id="2tn-jW-Fum"/>
                         <outlet property="timeSlider" destination="vmE-JT-V2t" id="8E8-rN-F92"/>
                         <outlet property="titleTextField" destination="VGv-9T-dVb" id="Age-Fl-J9O"/>
+                        <segue destination="sUf-ZL-dzq" kind="unwind" identifier="unwindSegueToHome" unwindAction="unwindSegueToHomeWithSegue:" id="pPp-bi-7HC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOf-nD-CA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="sUf-ZL-dzq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1876.8115942028987" y="148.66071428571428"/>
         </scene>

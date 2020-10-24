@@ -102,7 +102,9 @@ class AudioMemoViewController: UIViewController {
         noteController.createAudioNote(with: title, audioURL: recordingURL)
         self.delegate?.reloadData()
 
-        navigationController?.popViewController(animated: true)
+        performSegue(withIdentifier: "unwindSegueToHome", sender: self)
+
+        resetForm()
     }
 
     // MARK: - Functions
@@ -137,6 +139,12 @@ class AudioMemoViewController: UIViewController {
 
             timeRemainingLabel.text = timeIntervalFormatter.string(from: elapsedTime)
         }
+    }
+
+    func resetForm() {
+        timeElapsedLabel.text = "00:00"
+        timeRemainingLabel.text = "00:00"
+        titleTextField.text = nil
     }
 
     // Timer
