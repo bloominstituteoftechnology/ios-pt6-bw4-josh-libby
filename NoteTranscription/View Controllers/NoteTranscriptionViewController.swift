@@ -25,6 +25,7 @@ class NoteTranscriptionViewController: UIViewController {
     
     private let audioEngine = AVAudioEngine()
     private let speechRecognizer = SFSpeechRecognizer()
+    let noteController = NoteController.shared
     private var request: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private var audioRecorder: AVAudioRecorder?
@@ -74,8 +75,7 @@ class NoteTranscriptionViewController: UIViewController {
               !title.isEmpty,
               !image.isEmpty else { return }
 
-        let newNote = Notes(title: title, bodyText: noteText.text, timestamp: Date(), img: image)
-        noteDelegate?.getNotes(note: newNote)
+        noteController.createNote(with: title, bodyText: noteText.text, timestamp: Date(), image: image)
 
         performSegue(withIdentifier: "unwindSegueToHome", sender: self)
 
@@ -171,7 +171,7 @@ class NoteTranscriptionViewController: UIViewController {
     }
 }
 
-private func presentSuccessfulSaveAlert() {
+    private func presentSuccessfulSaveAlert() {
     let alert = UIAlertController(title: "Photo Saved!", message: "The photo has been saved to your Photo Library!", preferredStyle: .alert)
 
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

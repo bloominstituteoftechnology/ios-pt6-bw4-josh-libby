@@ -21,8 +21,10 @@ class AudioMemoViewController: UIViewController {
     @IBOutlet var timeRemainingLabel: UILabel!
     @IBOutlet var timeSlider: UISlider!
     @IBOutlet var audioVisualizer: AudioVisualizer!
+    @IBOutlet var titleTextField: UITextField!
 
     // MARK: - Properties
+    let noteController = NoteController.shared
     weak var timer: Timer?
     var recordingURL: URL?
     var audioRecorder: AVAudioRecorder?
@@ -94,7 +96,10 @@ class AudioMemoViewController: UIViewController {
     }
 
     @IBAction func saveRecording(_ sender: Any) {
-        // save recording here
+
+        guard let title = titleTextField.text, let recordingURL = recordingURL else { return }
+
+        noteController.createAudioNote(with: title, audioURL: recordingURL)
         self.delegate?.reloadData()
 
         navigationController?.popViewController(animated: true)
