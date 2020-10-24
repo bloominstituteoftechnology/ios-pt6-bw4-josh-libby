@@ -9,22 +9,34 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
     // MARK: - Properties
-    var note: Notes?
-    var notes: [Notes] = []
-    var notesDelegate: NotesDelegate?
+    let noteController = NoteController.shared
+    let dateFormatter = DateFormatter()
 
     // MARK: - Functions
     @IBAction func unwindSegueToHome(segue:UIStoryboardSegue) {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        tableView.reloadData()
+    }
+
+    // MARK: - Functions
+
+
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
+        return noteController.notes.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let note = notes[indexPath.row]
+        let note = noteController.notes[indexPath.row]
 
         if note.audioURL != nil {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioCell", for: indexPath) as? AudioMemoTableViewCell else { return UITableViewCell() }
@@ -34,11 +46,13 @@ class NotesTableViewController: UITableViewController {
 
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
-            let note = notes[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath)
+
+            dateFormatter.dateFormat = "MM-dd-yyyy hh:mm"
+            let dateString = dateFormatter.string(from: note.timestamp)
 
             cell.textLabel?.text = note.title
-            cell.detailTextLabel?.text = String(describing: note.timestamp)
+            cell.detailTextLabel?.text = dateString
 
             return cell
         }
@@ -49,7 +63,7 @@ class NotesTableViewController: UITableViewController {
             let detailVC = segue.destination as? NotesDetailViewController
 
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            detailVC?.note = notes[indexPath.row]
+            detailVC?.note = noteController.notes[indexPath.row]
         }
     }
 }
