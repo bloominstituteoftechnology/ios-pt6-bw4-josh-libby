@@ -13,7 +13,7 @@ class NotesTableViewController: UITableViewController, NSFetchedResultsControlle
     let noteController = NoteController.shared
     let dateFormatter = DateFormatter()
 
-    var fetchResultsController: NSFetchedResultsController<Note> = {
+    lazy var fetchResultsController: NSFetchedResultsController<Note> = {
         let fetchRequest: NSFetchRequest<Note> = Note.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: false)]
         let moc = CoreDataStack.shared.mainContext
@@ -51,16 +51,16 @@ class NotesTableViewController: UITableViewController, NSFetchedResultsControlle
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return noteController.notes.count // <-- This works, but needs to be this --> fetchResultsController.fetchedObjects?.count ?? 0
+        return noteController.notes.count // noteController.notes.count <-- This works, but needs to be this --> fetchResultsController.fetchedObjects?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let note = noteController.notes[indexPath.row] // <-- This works, but needs to be this --> fetchResultsController.object(at: indexPath)
+        let note = noteController.notes[indexPath.row] // noteController.notes[indexPath.row] <-- This works, but needs to be this --> fetchResultsController.object(at: indexPath)
 
         if note.audioURL != nil {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioCell", for: indexPath) as? AudioMemoTableViewCell else { return UITableViewCell() }
 
-            cell.recordingURL = note.audioURL // <-- This works, but needs to be this --> URL(string: note.audioURL!)
+            cell.recordingURL = note.audioURL // note.audioURL <-- This works, but needs to be this --> URL(string: note.audioURL!)
             cell.titleLabel.text = note.title
 
             return cell
@@ -68,7 +68,7 @@ class NotesTableViewController: UITableViewController, NSFetchedResultsControlle
             let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath)
 
             dateFormatter.dateFormat = "MM-dd-yyyy hh:mm"
-            let dateString = dateFormatter.string(from: note.timestamp) // <-- This works, but needs to be this --> dateFormatter.string(from: note.timestamp!)
+            let dateString = dateFormatter.string(from: note.timestamp) // dateFormatter.string(from: note.timestamp) <-- This works, but needs to be this --> dateFormatter.string(from: note.timestamp!)
 
             cell.textLabel?.text = note.title
             cell.detailTextLabel?.text = dateString
