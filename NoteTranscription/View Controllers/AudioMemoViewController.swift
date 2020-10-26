@@ -97,15 +97,24 @@ class AudioMemoViewController: UIViewController {
 
     @IBAction func saveRecording(_ sender: Any) {
 
-        guard let title = titleTextField.text, let recordingURL = recordingURL else { return }
+        guard let title = titleTextField.text, let recordingURL = recordingURL, !title.isEmpty else { return }
 
         noteController.createAudioNote(with: title, audioURL: recordingURL)
-        self.delegate?.reloadData()
-
-        navigationController?.popViewController(animated: true)
+        resetForm()
+        performSegue(withIdentifier: "unwindSegueToMain", sender: self)
     }
 
     // MARK: - Functions
+    func resetForm() {
+        timeElapsedLabel.text = "00:00"
+        timeRemainingLabel.text = "-00:00"
+        timeSlider.minimumValue = 0
+        timeSlider.maximumValue = 1
+        timeSlider.value = 0.5
+        titleTextField.text = nil
+
+    }
+
     func updateViews() {
         playButton.isEnabled = !isRecording
         recordButton.isEnabled = !isPlaying
@@ -297,4 +306,5 @@ extension AudioMemoViewController: AVAudioRecorderDelegate {
         }
     }
 }
+
 

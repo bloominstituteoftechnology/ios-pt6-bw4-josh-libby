@@ -3,3 +3,4 @@
 //
 
 #import "BW4Notes.h"
+#import "Note+Convenience.h"
