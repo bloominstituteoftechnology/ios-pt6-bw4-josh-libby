@@ -16,9 +16,6 @@
 		51862CA5253DF17400553C7B /* NotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862CA4253DF17400553C7B /* NotesDetailViewController.swift */; };
 		51862CAA253DF19C00553C7B /* NoteTranscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862CA9253DF19C00553C7B /* NoteTranscriptionViewController.swift */; };
 		51DE8CBD2540FD6800009A69 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8CBC2540FD6800009A69 /* UIImage+Scaling.swift */; };
-		51DE8CD7254219FC00009A69 /* NotesInternalStorage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8CD6254219FC00009A69 /* NotesInternalStorage+CoreDataClass.swift */; };
-		51DE8CDF25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8CDE25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift */; };
-		51DE8CE725421B0600009A69 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8CE625421B0600009A69 /* ImageHelper.swift */; };
 		51DE8D3425437E2900009A69 /* AudioMemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8D3325437E2900009A69 /* AudioMemoTableViewCell.swift */; };
 		68091E542543A6BA00282120 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68091E532543A6BA00282120 /* NoteController.swift */; };
 		685C44B525426634009CC989 /* AudioVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685C44B425426634009CC989 /* AudioVisualizer.swift */; };
@@ -60,9 +57,6 @@
 		51862CA4253DF17400553C7B /* NotesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailViewController.swift; sourceTree = "<group>"; };
 		51862CA9253DF19C00553C7B /* NoteTranscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTranscriptionViewController.swift; sourceTree = "<group>"; };
 		51DE8CBC2540FD6800009A69 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
-		51DE8CD6254219FC00009A69 /* NotesInternalStorage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesInternalStorage+CoreDataClass.swift"; sourceTree = "<group>"; };
-		51DE8CDE25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesInternalStorage+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		51DE8CE625421B0600009A69 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		51DE8D3325437E2900009A69 /* AudioMemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMemoTableViewCell.swift; sourceTree = "<group>"; };
 		68091E532543A6BA00282120 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		685C44B425426634009CC989 /* AudioVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizer.swift; sourceTree = "<group>"; };
@@ -112,8 +106,6 @@
 				51862C79253DE8CB00553C7B /* NoteTranscription.xcdatamodeld */,
 				51862C82253DE96300553C7B /* CoreDataStack.swift */,
 				51862C87253DE9A100553C7B /* Note+Convenience.swift */,
-				51DE8CD6254219FC00009A69 /* NotesInternalStorage+CoreDataClass.swift */,
-				51DE8CDE25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift */,
 			);
 			path = "Core Model";
 			sourceTree = "<group>";
@@ -151,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				51DE8CBC2540FD6800009A69 /* UIImage+Scaling.swift */,
-				51DE8CE625421B0600009A69 /* ImageHelper.swift */,
 				685C44B425426634009CC989 /* AudioVisualizer.swift */,
 				68091E532543A6BA00282120 /* NoteController.swift */,
 			);
@@ -357,11 +348,8 @@
 				51862C9B253DF11D00553C7B /* NotesTableViewController.swift in Sources */,
 				51862CA0253DF15500553C7B /* AudioMemoViewController.swift in Sources */,
 				51DE8D3425437E2900009A69 /* AudioMemoTableViewCell.swift in Sources */,
-				51DE8CD7254219FC00009A69 /* NotesInternalStorage+CoreDataClass.swift in Sources */,
-				51DE8CDF25421A8000009A69 /* NotesInternalStorage+CoreDataProperties.swift in Sources */,
 				51DE8CBD2540FD6800009A69 /* UIImage+Scaling.swift in Sources */,
 				51862CAA253DF19C00553C7B /* NoteTranscriptionViewController.swift in Sources */,
-				51DE8CE725421B0600009A69 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
