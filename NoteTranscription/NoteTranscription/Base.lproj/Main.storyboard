@@ -162,12 +162,7 @@
                             <constraint firstItem="q85-kM-OeX" firstAttribute="leading" secondItem="0YV-tN-OTL" secondAttribute="leading" constant="20" id="gcU-Zr-ioA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cBa-7t-2tV">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="QFd-69-dJN"/>
-                            <barButtonItem systemItem="edit" id="4LF-di-KAe"/>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="cBa-7t-2tV"/>
                     <connections>
                         <outlet property="bodyTextView" destination="JKd-xG-hg8" id="hg3-5H-4lO"/>
                         <outlet property="imageView" destination="9Pq-C2-3zi" id="lH3-rz-HB6"/>
@@ -445,7 +440,6 @@
         <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="stop.fill" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
