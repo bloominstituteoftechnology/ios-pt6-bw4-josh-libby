@@ -12,10 +12,6 @@ import CoreImage
 import CoreImage.CIFilterBuiltins
 import Photos
 
-protocol NotesDelegate {
-    func getNotes(note: Notes)
-}
-
 class NoteTranscriptionViewController: UIViewController {
     @IBOutlet weak var noteTitle: UITextField!
     @IBOutlet weak var noteText: UITextView!
@@ -30,7 +26,6 @@ class NoteTranscriptionViewController: UIViewController {
     private var recognitionTask: SFSpeechRecognitionTask?
     private var audioRecorder: AVAudioRecorder?
     var notes: Notes?
-    var noteDelegate: NotesDelegate?
 
     var originalImage: UIImage? {
         didSet {
@@ -75,7 +70,7 @@ class NoteTranscriptionViewController: UIViewController {
               !title.isEmpty,
               !image.isEmpty else { return }
 
-        noteController.createNote(with: title, bodyText: noteText.text, timestamp: Date(), image: image)
+        noteController.createNote(with: title, bodyText: noteText.text, timestamp: Date(), img: image)
 
         performSegue(withIdentifier: "unwindSegueToHome", sender: self)
 

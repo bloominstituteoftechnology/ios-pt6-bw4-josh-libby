@@ -6,11 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+@class BW4CoreDataStack;
 
 NS_ASSUME_NONNULL_BEGIN
 
 NS_SWIFT_NAME(Notes)
-@interface BW4Notes : NSObject
+@interface BW4Notes : NSObject 
 
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *bodyText;

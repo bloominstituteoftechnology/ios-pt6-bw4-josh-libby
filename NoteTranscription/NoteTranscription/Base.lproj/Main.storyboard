@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xkq-GU-ngH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,8 +52,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNr-g7-0rt">
-                                            <rect key="frame" x="345" y="0.0" width="69" height="43"/>
-                                            <state key="normal" title="Button" image="play.fill" catalog="system"/>
+                                            <rect key="frame" x="379" y="0.0" width="15" height="43"/>
+                                            <state key="normal" image="play.fill" catalog="system"/>
                                             <connections>
                                                 <action selector="playButtonTapped:" destination="4rn-Xb-bWx" eventType="touchUpInside" id="xUH-ZN-awv"/>
                                             </connections>
@@ -72,7 +72,7 @@
                                         <constraint firstItem="RqG-Iz-Vdp" firstAttribute="top" secondItem="WnI-5T-Ugz" secondAttribute="topMargin" id="TYV-qa-1cT"/>
                                         <constraint firstItem="XNr-g7-0rt" firstAttribute="top" secondItem="WnI-5T-Ugz" secondAttribute="top" id="VSW-Ke-SxI"/>
                                         <constraint firstItem="RqG-Iz-Vdp" firstAttribute="leading" secondItem="WnI-5T-Ugz" secondAttribute="leadingMargin" id="hc6-8B-geQ"/>
-                                        <constraint firstAttribute="trailing" secondItem="XNr-g7-0rt" secondAttribute="trailing" id="v6Q-Sr-du6"/>
+                                        <constraint firstAttribute="trailing" secondItem="XNr-g7-0rt" secondAttribute="trailing" constant="20" id="v6Q-Sr-du6"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -90,7 +90,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmW-lP-BIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1984" y="881"/>
+            <point key="canvasLocation" x="1982.608695652174" y="880.58035714285711"/>
         </scene>
         <!--Home-->
         <scene sceneID="Env-39-OgM">
@@ -168,6 +168,11 @@
                             <barButtonItem systemItem="edit" id="4LF-di-KAe"/>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="JKd-xG-hg8" id="MnJ-cX-j1D"/>
+                        <outlet property="imageView" destination="9Pq-C2-3zi" id="zEv-f2-PFW"/>
+                        <outlet property="titleTextField" destination="XOA-yE-gQB" id="LIJ-X7-Oes"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lu5-cS-zmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -359,6 +364,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveRecording:" destination="iyC-fU-5yw" eventType="touchUpInside" id="4fz-Su-Kcb"/>
+                                    <segue destination="OQw-eJ-PlC" kind="unwind" identifier="unwindSegueToMain" unwindAction="unwindSegueToMainWithSegue:" id="rvA-nL-Rtl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -392,6 +398,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOf-nD-CA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="OQw-eJ-PlC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1876.8115942028987" y="148.66071428571428"/>
         </scene>

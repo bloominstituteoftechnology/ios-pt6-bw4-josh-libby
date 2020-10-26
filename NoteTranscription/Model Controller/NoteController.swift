@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class NoteController {
 
@@ -14,11 +15,16 @@ class NoteController {
 
     var notes: [Notes] = []
 
-    func createNote(with title: String, bodyText: String, timestamp: Date, image: Data) {
+    func createNote(with title: String, bodyText: String, timestamp: Date, img: Data) {
 
-        let note = Notes(title: title, bodyText: bodyText, timestamp: timestamp, img: image)
+        let note = Notes(title: title, bodyText: bodyText, timestamp: timestamp, img: img)
         notes.append(note)
 
+        do {
+            try CoreDataStack.shared.mainContext.save()
+        } catch {
+            print("Error saving Note")
+        }
     }
 
     func createAudioNote(with title: String, audioURL: URL) {
@@ -26,6 +32,10 @@ class NoteController {
         let note = Notes(title: title, audioURL: audioURL)
         notes.append(note)
 
+        do {
+            try CoreDataStack.shared.mainContext.save()
+        } catch {
+            print("Error saving Audio Note")
+        }
     }
-
 }
