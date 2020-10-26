@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		51862C7B253DE8CB00553C7B /* NoteTranscription.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51862C79253DE8CB00553C7B /* NoteTranscription.xcdatamodeld */; };
 		51862C83253DE96300553C7B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862C82253DE96300553C7B /* CoreDataStack.swift */; };
-		51862C88253DE9A100553C7B /* Note+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862C87253DE9A100553C7B /* Note+Convenience.swift */; };
 		51862C93253DEB8700553C7B /* BW4Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862C92253DEB8700553C7B /* BW4Notes.m */; };
 		51862C9B253DF11D00553C7B /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862C9A253DF11D00553C7B /* NotesTableViewController.swift */; };
 		51862CA0253DF15500553C7B /* AudioMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862C9F253DF15500553C7B /* AudioMemoViewController.swift */; };
@@ -17,6 +16,7 @@
 		51862CAA253DF19C00553C7B /* NoteTranscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51862CA9253DF19C00553C7B /* NoteTranscriptionViewController.swift */; };
 		51DE8CBD2540FD6800009A69 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8CBC2540FD6800009A69 /* UIImage+Scaling.swift */; };
 		51DE8D3425437E2900009A69 /* AudioMemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8D3325437E2900009A69 /* AudioMemoTableViewCell.swift */; };
+		51DE8DE3254662E400009A69 /* Note+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE8DE2254662E300009A69 /* Note+Convenience.m */; };
 		68091E542543A6BA00282120 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68091E532543A6BA00282120 /* NoteController.swift */; };
 		685C44B525426634009CC989 /* AudioVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685C44B425426634009CC989 /* AudioVisualizer.swift */; };
 		68802CBD2537D9110039CCE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68802CBC2537D9110039CCE4 /* AppDelegate.swift */; };
@@ -48,7 +48,6 @@
 /* Begin PBXFileReference section */
 		51862C7A253DE8CB00553C7B /* NoteTranscription.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteTranscription.xcdatamodel; sourceTree = "<group>"; };
 		51862C82253DE96300553C7B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		51862C87253DE9A100553C7B /* Note+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Convenience.swift"; sourceTree = "<group>"; };
 		51862C90253DEB8600553C7B /* NoteTranscription-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoteTranscription-Bridging-Header.h"; sourceTree = "<group>"; };
 		51862C91253DEB8700553C7B /* BW4Notes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BW4Notes.h; sourceTree = "<group>"; };
 		51862C92253DEB8700553C7B /* BW4Notes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BW4Notes.m; sourceTree = "<group>"; };
@@ -58,6 +57,8 @@
 		51862CA9253DF19C00553C7B /* NoteTranscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTranscriptionViewController.swift; sourceTree = "<group>"; };
 		51DE8CBC2540FD6800009A69 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		51DE8D3325437E2900009A69 /* AudioMemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMemoTableViewCell.swift; sourceTree = "<group>"; };
+		51DE8DE1254662E300009A69 /* Note+Convenience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Note+Convenience.h"; sourceTree = "<group>"; };
+		51DE8DE2254662E300009A69 /* Note+Convenience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Note+Convenience.m"; sourceTree = "<group>"; };
 		68091E532543A6BA00282120 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		685C44B425426634009CC989 /* AudioVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizer.swift; sourceTree = "<group>"; };
 		68802CB92537D9110039CCE4 /* NoteTranscription.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteTranscription.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +106,8 @@
 			children = (
 				51862C79253DE8CB00553C7B /* NoteTranscription.xcdatamodeld */,
 				51862C82253DE96300553C7B /* CoreDataStack.swift */,
-				51862C87253DE9A100553C7B /* Note+Convenience.swift */,
+				51DE8DE1254662E300009A69 /* Note+Convenience.h */,
+				51DE8DE2254662E300009A69 /* Note+Convenience.m */,
 			);
 			path = "Core Model";
 			sourceTree = "<group>";
@@ -344,8 +346,8 @@
 				685C44B525426634009CC989 /* AudioVisualizer.swift in Sources */,
 				68802CBD2537D9110039CCE4 /* AppDelegate.swift in Sources */,
 				68802CBF2537D9110039CCE4 /* SceneDelegate.swift in Sources */,
-				51862C88253DE9A100553C7B /* Note+Convenience.swift in Sources */,
 				51862C9B253DF11D00553C7B /* NotesTableViewController.swift in Sources */,
+				51DE8DE3254662E400009A69 /* Note+Convenience.m in Sources */,
 				51862CA0253DF15500553C7B /* AudioMemoViewController.swift in Sources */,
 				51DE8D3425437E2900009A69 /* AudioMemoTableViewCell.swift in Sources */,
 				51DE8CBD2540FD6800009A69 /* UIImage+Scaling.swift in Sources */,
