@@ -19,6 +19,11 @@ class NoteController {
         let note = Notes(title: title, bodyText: bodyText, timestamp: timestamp, img: image)
         notes.append(note)
 
+        do {
+            try CoreDataStack.shared.mainContext.save()
+        } catch {
+            print("Error saving Note")
+        }
     }
 
     func createAudioNote(with title: String, audioURL: URL) {
@@ -26,6 +31,10 @@ class NoteController {
         let note = Notes(title: title, audioURL: audioURL)
         notes.append(note)
 
+        do {
+            try CoreDataStack.shared.mainContext.save()
+        } catch {
+            print("Error saving Note")
+        }
     }
-
 }
